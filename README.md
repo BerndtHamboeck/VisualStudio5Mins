@@ -1,4 +1,7 @@
-# VisualStudio5Mins
-Visual Studio 5 Minuten Videos - Source Code
+# Visual Studio in 5 Minuten
 
-Die Videos sind auf Channel 9 zu finden.
+In der Serie „Visual Studio in 5 Minuten“ werden Feature der IDE vorgestellt, bzw. ein Framework vorgestellt.
+
+Hier, in diesem Repository, ist der zugehörige Source Code zu finden.
+
+Die Videos sind auf Channel 9 veröffentlicht!
