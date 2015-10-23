@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamForm5Minutes;assembly=XamForm5Minutes"
+             x:Class="XamForm5Minutes.MainPage">
+  <Grid>
+
+    <Grid.BindingContext>
+      <local:MainPageViewModel />
+    </Grid.BindingContext>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="*"></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <Label x:Name="titleLabel" Text="Verbrauchsrechner" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2"/>
+    <Label Grid.Row="2" VerticalOptions="Center">Gefahrene KM:</Label>
+    <Label Grid.Row="3"  VerticalOptions="Center">Getankt (Liter):</Label>
+
+    <Entry  Grid.Column="1" Grid.Row="2" Text="{Binding Number1}"></Entry>
+    <Entry  Grid.Column="1" Grid.Row="3" Text="{Binding Number2}"></Entry>
+
+    <Button Text="Verbrauch Berechnen"
+              Command="{Binding CalculateCommand}"
+              Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+    <Label Grid.Row="6" Text="Verbrauch l/100km: "></Label>
+    <Label Grid.Row="6" Grid.Column="1" Text="{Binding Result}"></Label>
+
+    <Button Grid.Row="7" x:Name="aboutButton" Text="About"></Button>
+           
+  </Grid>
+
+</ContentPage>
